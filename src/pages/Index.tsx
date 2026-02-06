@@ -194,7 +194,7 @@ const Index = () => {
             </div>
 
             <p className="font-mono text-xs text-muted-foreground/50">
-              © 2024 DEV_MASTER. All rights reserved. Game on.
+              © 2024 Jananika. All rights reserved. Game on.
             </p>
           </div>
         </footer>
