@@ -169,14 +169,14 @@ const Index = () => {
                 whileHover={{ scale: 1.1 }}
                 className="font-mono text-xs text-primary border border-primary/30 px-4 py-2 hover:bg-primary/10 transition-all"
               >
-                📸 Instagram
+                Instagram
               </motion.a>
               <motion.a
                 href="tel:+917010519965"
                 whileHover={{ scale: 1.1 }}
                 className="font-mono text-xs text-primary border border-primary/30 px-4 py-2 hover:bg-primary/10 transition-all"
               >
-                📞 Call Us
+                Call Us
               </motion.a>
             </div>
 

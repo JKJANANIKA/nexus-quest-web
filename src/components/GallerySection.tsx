@@ -5,37 +5,37 @@ const galleryItems = [
   {
     title: 'PS5 ZONE',
     description: '4K HDR gaming stations with the latest titles',
-    icon: '🎮',
+    icon: '',
     gradient: 'from-primary/20 to-secondary/20',
   },
   {
     title: 'PC BATTLE STATIONS',
     description: 'High-end rigs with RTX graphics and ultra-wide displays',
-    icon: '🖥️',
+    icon: '',
     gradient: 'from-secondary/20 to-accent/20',
   },
   {
     title: 'VR ARENA',
     description: 'PSVR2 experience with full room-scale tracking',
-    icon: '🥽',
+    icon: '',
     gradient: 'from-accent/20 to-primary/20',
   },
   {
     title: 'DOLBY ATMOS LOUNGE',
     description: 'Private room with cinema-grade surround sound',
-    icon: '🔊',
+    icon: '',
     gradient: 'from-primary/20 to-accent/20',
   },
   {
     title: 'RACING COCKPIT',
     description: 'Logitech G923 full setup with pedals and shifter',
-    icon: '🏎️',
+    icon: '',
     gradient: 'from-secondary/20 to-primary/20',
   },
   {
     title: 'CHILL ZONE',
     description: 'Relax between sessions with snacks and drinks',
-    icon: '🍿',
+    icon: '',
     gradient: 'from-accent/20 to-secondary/20',
   },
 ];
@@ -133,7 +133,7 @@ export const GallerySection = () => {
             className="inline-flex items-center gap-2 font-display text-sm text-primary border border-primary/30 px-6 py-3 
               hover:bg-primary/10 hover:glow-border transition-all"
           >
-            📸 @gamerscreed_dgl
+            @gamerscreed_dgl
           </motion.a>
         </motion.div>
       </div>

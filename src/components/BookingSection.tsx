@@ -54,7 +54,7 @@ export const BookingSection = () => {
             transition={{ duration: 2, repeat: Infinity }}
             className="inline-block mb-4"
           >
-            <span className="text-6xl">🎮</span>
+            <span className="text-6xl font-display text-primary">GC</span>
           </motion.div>
 
           <p className="font-mono text-sm text-primary tracking-widest mb-2 animate-pulse">
@@ -81,7 +81,7 @@ export const BookingSection = () => {
               transition={{ duration: 1 }}
               className="text-7xl mb-6"
             >
-              🏆
+              GG
             </motion.div>
             <h3 className="font-display text-3xl font-bold text-accent mb-4">
               SESSION BOOKED!
@@ -219,7 +219,7 @@ export const BookingSection = () => {
                   className="inline-flex items-center gap-2 font-display text-sm border border-accent text-accent px-5 py-3
                     hover:bg-accent/10 transition-all tracking-wider"
                 >
-                  💬 WHATSAPP
+                  WHATSAPP
                 </motion.a>
                 <CyberButton type="submit" variant="primary" size="lg" glowing disabled={isSubmitting}>
                   {isSubmitting ? (
@@ -228,12 +228,12 @@ export const BookingSection = () => {
                         animate={{ rotate: 360 }}
                         transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                       >
-                        ⚡
+                        //
                       </motion.span>
                       BOOKING...
                     </>
                   ) : (
-                    <>🎮 BOOK SESSION</>
+                    <>BOOK SESSION</>
                   )}
                 </CyberButton>
               </div>
@@ -249,9 +249,9 @@ export const BookingSection = () => {
           className="mt-12 grid md:grid-cols-3 gap-4"
         >
           {[
-            { icon: '📍', label: 'LOCATION', value: '34, Siluvathur Rd, Elli Nagar, Dindigul', href: 'https://maps.google.com/?q=Gamers+Creed+Dindigul' },
-            { icon: '📞', label: 'CALL US', value: '+91 70105 19965', href: 'tel:+917010519965' },
-            { icon: '⏰', label: 'HOURS', value: '10:30 AM – 9:30 PM Daily', href: undefined },
+            { icon: '>', label: 'LOCATION', value: '34, Siluvathur Rd, Elli Nagar, Dindigul', href: 'https://maps.google.com/?q=Gamers+Creed+Dindigul' },
+            { icon: '#', label: 'CALL US', value: '+91 70105 19965', href: 'tel:+917010519965' },
+            { icon: '//', label: 'HOURS', value: '10:30 AM – 9:30 PM Daily', href: undefined },
           ].map((info) => (
             <motion.a
               key={info.label}

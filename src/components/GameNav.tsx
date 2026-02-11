@@ -8,11 +8,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { id: 'hero', label: 'HOME', icon: '🏠' },
-  { id: 'experiences', label: 'EXPERIENCES', icon: '🎮' },
-  { id: 'pricing', label: 'PRICING', icon: '💰' },
-  { id: 'gallery', label: 'GALLERY', icon: '📸' },
-  { id: 'booking', label: 'BOOK NOW', icon: '🎯' },
+  { id: 'hero', label: 'HOME', icon: '>' },
+  { id: 'experiences', label: 'EXPERIENCES', icon: '//' },
+  { id: 'pricing', label: 'PRICING', icon: '$' },
+  { id: 'gallery', label: 'GALLERY', icon: '#' },
+  { id: 'booking', label: 'BOOK NOW', icon: '+' },
 ];
 
 interface GameNavProps {
