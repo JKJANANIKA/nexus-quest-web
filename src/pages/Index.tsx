@@ -2,32 +2,19 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GameNav } from '@/components/GameNav';
 import { HeroSection } from '@/components/HeroSection';
-import { CharacterSection } from '@/components/CharacterSection';
-import { SkillTreeSection } from '@/components/SkillTreeSection';
-import { PowerUpsSection } from '@/components/PowerUpsSection';
-import { MissionsSection } from '@/components/MissionsSection';
-import { AchievementsSection } from '@/components/AchievementsSection';
-import { TestimonialsSection } from '@/components/TestimonialsSection';
-import { ContactSection } from '@/components/ContactSection';
+import { ExperiencesSection } from '@/components/ExperiencesSection';
+import { PricingSection } from '@/components/PricingSection';
+import { GallerySection } from '@/components/GallerySection';
+import { BookingSection } from '@/components/BookingSection';
 import { XPProgressBar } from '@/components/XPProgressBar';
 
-const sections = [
-  'hero',
-  'character',
-  'skills',
-  'powerups',
-  'missions',
-  'achievements',
-  'testimonials',
-  'contact',
-];
+const sections = ['hero', 'experiences', 'pricing', 'gallery', 'booking'];
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Handle scroll and update active section
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 2;
@@ -35,14 +22,12 @@ const Index = () => {
       const scrollProgress = (window.scrollY / documentHeight) * 100;
       setProgress(Math.min(scrollProgress, 100));
 
-      // Find active section
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
           const rect = element.getBoundingClientRect();
           const sectionTop = rect.top + window.scrollY;
           const sectionBottom = sectionTop + rect.height;
-
           if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             setActiveSection(sectionId);
             break;
@@ -55,7 +40,6 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navigate to section
   const navigateToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -63,17 +47,13 @@ const Index = () => {
     }
   };
 
-  // Loading screen
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2500);
+    const timer = setTimeout(() => setIsLoading(false), 2500);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      {/* Loading Screen */}
       <AnimatePresence>
         {isLoading && (
           <motion.div
@@ -82,7 +62,6 @@ const Index = () => {
             transition={{ duration: 0.5 }}
             className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center"
           >
-            {/* Cyber logo */}
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -103,11 +82,10 @@ const Index = () => {
                 className="absolute inset-2 border border-secondary rounded"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-display text-2xl font-bold text-primary">DEV</span>
+                <span className="font-display text-lg font-bold text-primary">GC</span>
               </div>
             </motion.div>
 
-            {/* Loading bar */}
             <div className="w-64 mb-4">
               <div className="h-1 bg-muted overflow-hidden">
                 <motion.div
@@ -119,7 +97,6 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Loading text */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -131,7 +108,7 @@ const Index = () => {
                 transition={{ duration: 1.5, repeat: Infinity }}
                 className="font-mono text-sm text-primary tracking-widest"
               >
-                INITIALIZING SYSTEM...
+                ENTERING THE ARENA...
               </motion.p>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -139,37 +116,28 @@ const Index = () => {
                 transition={{ delay: 1 }}
                 className="font-mono text-xs text-muted-foreground mt-2"
               >
-                Loading assets • Preparing experience
+                Gamer's Creed • Dindigul
               </motion.p>
             </motion.div>
 
-            {/* Scan lines */}
             <div className="absolute inset-0 scan-lines pointer-events-none" />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Main content */}
       <div className="relative min-h-screen bg-background">
-        {/* Game Navigation */}
         <GameNav activeSection={activeSection} onNavigate={navigateToSection} />
 
-        {/* Sections */}
         <main>
           <HeroSection onNavigate={navigateToSection} />
-          <CharacterSection />
-          <SkillTreeSection />
-          <PowerUpsSection />
-          <MissionsSection />
-          <AchievementsSection />
-          <TestimonialsSection />
-          <ContactSection />
+          <ExperiencesSection />
+          <PricingSection onNavigate={navigateToSection} />
+          <GallerySection />
+          <BookingSection />
         </main>
 
-        {/* XP Progress Bar */}
         <XPProgressBar progress={progress} currentSection={activeSection} />
 
-        {/* Footer */}
         <footer className="relative pb-20 pt-12 px-6 border-t border-hud">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
@@ -178,23 +146,42 @@ const Index = () => {
               className="mb-6"
             >
               <span className="font-display text-2xl font-bold text-gradient">
-                DEV_MASTER
+                GAMER'S CREED
               </span>
               <p className="font-mono text-xs text-muted-foreground mt-2">
-                CRAFTING DIGITAL EXPERIENCES SINCE 2017
+                PREMIUM GAMING LOUNGE • DINDIGUL
               </p>
             </motion.div>
 
             <div className="flex flex-wrap justify-center gap-8 mb-8">
-              {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind'].map((tech) => (
+              {['PS5', 'PC Gaming', 'PSVR2', 'Dolby Atmos', 'Racing Sim'].map((tech) => (
                 <span key={tech} className="font-mono text-xs text-muted-foreground">
                   {tech}
                 </span>
               ))}
             </div>
 
+            <div className="flex justify-center gap-4 mb-6">
+              <motion.a
+                href="https://www.instagram.com/gamerscreed_dgl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                className="font-mono text-xs text-primary border border-primary/30 px-4 py-2 hover:bg-primary/10 transition-all"
+              >
+                📸 Instagram
+              </motion.a>
+              <motion.a
+                href="tel:+917010519965"
+                whileHover={{ scale: 1.1 }}
+                className="font-mono text-xs text-primary border border-primary/30 px-4 py-2 hover:bg-primary/10 transition-all"
+              >
+                📞 Call Us
+              </motion.a>
+            </div>
+
             <p className="font-mono text-xs text-muted-foreground/50">
-              © 2024 Jananika. All rights reserved. Game on.
+              © 2025 Gamer's Creed. All rights reserved. Game on.
             </p>
           </div>
         </footer>

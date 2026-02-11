@@ -40,7 +40,7 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
             transition={{ delay: 0.5 }}
             className="mt-2 font-mono text-xs text-muted-foreground tracking-widest"
           >
-            INITIALIZING SYSTEM...
+            LOADING ARENA...
           </motion.p>
         </motion.div>
 
@@ -56,22 +56,22 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            [ SYSTEM ONLINE ]
+            [ WELCOME TO THE ARENA ]
           </motion.p>
 
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-foreground">LEVEL UP YOUR</span>
+            <span className="text-gradient neon-text">GAMER'S CREED</span>
             <br />
-            <span className="text-gradient neon-text">BRAND</span>
-            <br />
-            <span className="text-foreground">WITH HIGH-PERFORMANCE</span>
+            <span className="text-foreground text-2xl md:text-3xl lg:text-4xl">
+              PREMIUM GAMING LOUNGE
+            </span>
             <br />
             <motion.span
-              className="text-gradient-cyan-purple"
+              className="text-gradient-cyan-purple text-xl md:text-2xl"
               animate={{ opacity: [1, 0.7, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              WEBSITES
+              DINDIGUL
             </motion.span>
           </h1>
 
@@ -81,8 +81,11 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
             transition={{ delay: 1.5 }}
             className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Building fast, scalable, and conversion-focused digital experiences
-            that transform your online presence into a competitive advantage.
+            PS5 • PC Gaming • VR Experience • Dolby Atmos Lounge • Racing Simulator
+            <br />
+            <span className="text-sm text-muted-foreground/70">
+              Open Daily 10:30 AM – 9:30 PM
+            </span>
           </motion.p>
         </motion.div>
 
@@ -97,20 +100,39 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
             variant="primary"
             size="lg"
             glowing
-            onClick={() => onNavigate('contact')}
+            onClick={() => onNavigate('booking')}
           >
-            <span className="mr-2">▶</span>
-            START MISSION
+            <span className="mr-2">🎮</span>
+            BOOK A SESSION
           </CyberButton>
 
           <CyberButton
             variant="secondary"
             size="lg"
-            onClick={() => onNavigate('missions')}
+            onClick={() => onNavigate('experiences')}
           >
-            <span className="mr-2">📁</span>
-            VIEW MISSIONS
+            <span className="mr-2">⚡</span>
+            EXPLORE EXPERIENCES
           </CyberButton>
+        </motion.div>
+
+        {/* Stats bar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.2 }}
+          className="mt-12 flex flex-wrap justify-center gap-8"
+        >
+          {[
+            { label: 'GOOGLE RATING', value: '5.0 ⭐' },
+            { label: 'REVIEWS', value: '61+' },
+            { label: 'PLATFORMS', value: 'PS5 | PC | VR' },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="font-display text-xl md:text-2xl font-bold text-primary">{stat.value}</p>
+              <p className="font-mono text-[10px] text-muted-foreground tracking-widest">{stat.label}</p>
+            </div>
+          ))}
         </motion.div>
 
         {/* Scroll indicator */}
@@ -142,14 +164,14 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
       {/* Corner HUD elements */}
       <div className="absolute top-8 left-8 font-mono text-xs text-primary/50 z-20">
         <div className="border-l-2 border-t-2 border-primary/30 p-3">
-          <p>SYS.STATUS: ACTIVE</p>
-          <p>VERSION: 2.0.24</p>
+          <p>STATUS: OPEN</p>
+          <p>ARENA: DINDIGUL</p>
         </div>
       </div>
 
       <div className="absolute top-8 right-8 font-mono text-xs text-primary/50 z-20 text-right">
         <div className="border-r-2 border-t-2 border-primary/30 p-3">
-          <p>UPTIME: 99.9%</p>
+          <p>PLAYERS: ONLINE</p>
           <p>PING: 12ms</p>
         </div>
       </div>
