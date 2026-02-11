@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 
 const experiences = [
   {
-    icon: '🎮',
+    icon: '',
     title: 'PS5 GAMING',
     tag: 'CONSOLE',
     description: 'Experience next-gen gaming on PlayStation 5 with a massive library of AAA titles, 4K HDR visuals, and DualSense haptic feedback.',
@@ -11,7 +11,7 @@ const experiences = [
     color: 'hsl(var(--primary))',
   },
   {
-    icon: '🖥️',
+    icon: '',
     title: 'PC GAMING',
     tag: 'HIGH-END',
     description: 'High-performance gaming PCs with top-tier GPUs, ultra-wide monitors, and mechanical keyboards for the ultimate competitive edge.',
@@ -19,7 +19,7 @@ const experiences = [
     color: 'hsl(var(--secondary))',
   },
   {
-    icon: '🥽',
+    icon: '',
     title: 'VR EXPERIENCE',
     tag: 'PSVR2',
     description: 'Dive into virtual reality with PlayStation VR2. Eye-tracking, haptic feedback, and 4K HDR for truly immersive gaming.',
@@ -27,7 +27,7 @@ const experiences = [
     color: 'hsl(var(--accent))',
   },
   {
-    icon: '🔊',
+    icon: '',
     title: 'DOLBY ATMOS LOUNGE',
     tag: 'PREMIUM',
     description: 'Private lounge with Dolby Atmos surround sound. Feel every explosion, whisper, and footstep in cinematic 3D audio.',
@@ -35,7 +35,7 @@ const experiences = [
     color: 'hsl(var(--primary))',
   },
   {
-    icon: '🏎️',
+    icon: '',
     title: 'RACING SIMULATOR',
     tag: 'G923',
     description: 'Logitech G923 racing wheel with force feedback, pedals, and shifter. Feel every turn on tracks from F1 to rally stages.',

@@ -6,7 +6,7 @@ const pricingPlans = [
   {
     name: 'QUICK MATCH',
     duration: '1 Hour',
-    icon: '⚡',
+    icon: '',
     prices: [
       { platform: 'PS5 / PC', price: '₹80' },
       { platform: 'VR (PSVR2)', price: '₹120' },
@@ -18,7 +18,7 @@ const pricingPlans = [
   {
     name: 'RANKED SESSION',
     duration: '3 Hours',
-    icon: '🔥',
+    icon: '',
     prices: [
       { platform: 'PS5 / PC', price: '₹200' },
       { platform: 'VR (PSVR2)', price: '₹300' },
@@ -30,7 +30,7 @@ const pricingPlans = [
   {
     name: 'MARATHON',
     duration: '5+ Hours',
-    icon: '👑',
+    icon: '',
     prices: [
       { platform: 'PS5 / PC', price: '₹300' },
       { platform: 'VR (PSVR2)', price: '₹450' },
@@ -42,7 +42,7 @@ const pricingPlans = [
   {
     name: 'PRIVATE LOUNGE',
     duration: 'Per Hour',
-    icon: '🎯',
+    icon: '',
     prices: [
       { platform: 'Dolby Atmos Room', price: '₹500' },
       { platform: 'Group (4 players)', price: '₹1500' },

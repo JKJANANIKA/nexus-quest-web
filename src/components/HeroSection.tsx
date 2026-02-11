@@ -102,7 +102,6 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
             glowing
             onClick={() => onNavigate('booking')}
           >
-            <span className="mr-2">🎮</span>
             BOOK A SESSION
           </CyberButton>
 
@@ -111,7 +110,6 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
             size="lg"
             onClick={() => onNavigate('experiences')}
           >
-            <span className="mr-2">⚡</span>
             EXPLORE EXPERIENCES
           </CyberButton>
         </motion.div>
@@ -124,7 +122,7 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
           className="mt-12 flex flex-wrap justify-center gap-8"
         >
           {[
-            { label: 'GOOGLE RATING', value: '5.0 ⭐' },
+            { label: 'GOOGLE RATING', value: '5.0' },
             { label: 'REVIEWS', value: '61+' },
             { label: 'PLATFORMS', value: 'PS5 | PC | VR' },
           ].map((stat) => (
