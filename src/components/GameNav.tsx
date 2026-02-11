@@ -8,13 +8,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { id: 'hero', label: 'START GAME', icon: '▶' },
-  { id: 'character', label: 'CHARACTER', icon: '👤' },
-  { id: 'skills', label: 'SKILL TREE', icon: '🌟' },
-  { id: 'powerups', label: 'POWER UPS', icon: '⚡' },
-  { id: 'missions', label: 'MISSIONS', icon: '🎯' },
-  { id: 'achievements', label: 'ACHIEVEMENTS', icon: '🏆' },
-  { id: 'contact', label: 'FINAL BOSS', icon: '💀' },
+  { id: 'hero', label: 'HOME', icon: '🏠' },
+  { id: 'experiences', label: 'EXPERIENCES', icon: '🎮' },
+  { id: 'pricing', label: 'PRICING', icon: '💰' },
+  { id: 'gallery', label: 'GALLERY', icon: '📸' },
+  { id: 'booking', label: 'BOOK NOW', icon: '🎯' },
 ];
 
 interface GameNavProps {
@@ -55,7 +53,6 @@ export const GameNav = ({ activeSection, onNavigate }: GameNavProps) => {
                   }
                 `}
               >
-                {/* Active indicator */}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeNav"
@@ -81,7 +78,6 @@ export const GameNav = ({ activeSection, onNavigate }: GameNavProps) => {
                   )}
                 </AnimatePresence>
 
-                {/* Hover glow */}
                 <motion.div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                   style={{
